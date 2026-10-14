@@ -25,8 +25,8 @@
 ### 1. Home Page
 
 <!-- Replace the path below with your homepage screenshot. -->
-![FoodCompare Home Page](<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/9001c08c-6c60-41cb-b587-9778a6da3cdb" />
-)
+![FoodCompare Home Page]<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/9001c08c-6c60-41cb-b587-9778a6da3cdb" />
+
 
 *The main dashboard and food discovery interface.*
 
