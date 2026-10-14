@@ -33,24 +33,24 @@
 ### 2. Food Exploration and Category Filtering
 
 <!-- Replace the path below with your food exploration screenshot. -->
-![Food Exploration](<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/1ffaa0d3-0e19-4ea4-aefb-039a13fee5bf" />
-)
+![Food Exploration]<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/1ffaa0d3-0e19-4ea4-aefb-039a13fee5bf" />
+
 
 *Explore food listings and browse categories across supported platforms.*
 
 ### 3. Food Comparison
 
 <!-- Replace the path below with your comparison screenshot. -->
-![Food Comparison](<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/ae6ac9fe-25d7-4351-8630-dcde4786e90c" />
-)
+![Food Comparison]<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/ae6ac9fe-25d7-4351-8630-dcde4786e90c" />
+
 
 *Compare available listings, prices, and other displayed details.*
 
 ### 4. Analytics Dashboard
 
 <!-- Replace the path below with your analytics screenshot. -->
-![Analytics Dashboard](<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/8cefdcfc-6e2d-4195-8dcd-fae3f750b6a7" />
-)
+![Analytics Dashboard]<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/8cefdcfc-6e2d-4195-8dcd-fae3f750b6a7" />
+
 
 *Explore analytical summaries and visualizations derived from the project datasets.*
 
