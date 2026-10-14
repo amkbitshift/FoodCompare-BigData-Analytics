@@ -57,7 +57,9 @@
 ### 5. Machine Learning Evaluation
 
 <!-- Replace the path below with your ML evaluation screenshot. -->
-![Machine Learning Evaluation](docs/screenshots/ml-evaluation.png)
+![Machine Learning Evaluation]<img width="545" height="469" alt="image" src="https://github.com/user-attachments/assets/7278cb34-683e-4f72-b3bc-432963bb2fae" /><img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/3a852e53-a9bb-490b-b238-743a87f707cb" />
+
+
 
 *View rating-classification experiments and delivery-time prediction results.*
 
