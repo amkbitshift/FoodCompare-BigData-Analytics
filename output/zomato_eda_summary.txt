@@ -1,0 +1,43 @@
+ZOMATO EXPLORATORY DATA ANALYSIS
+=============================================
+
+Total item records: 101,530
+Records with numeric item ratings: 101,530
+Average item rating: 3.8904747117690324
+Minimum item rating: 3.0
+Maximum item rating: 4.65
+
+Records with valid non-negative prices: 101,530
+Average listed item price: 243.6907579040683
+Minimum listed item price: 0.95
+Maximum listed item price: 12024.0
+
+TOP 10 CITIES BY ITEM-RECORD COUNT
+Hyderabad: 13,100
+Mumbai: 11,640
+Chennai: 11,147
+Jaipur: 11,009
+Bangalore: 9,450
+Ahmedabad: 8,519
+Kolkata: 6,955
+Pune: 6,655
+Kochi: 6,281
+Raipur: 6,272
+
+TOP 10 CUISINES BY TAG COUNT
+Beverages: 32,818
+Pizza: 12,383
+Desserts: 9,285
+Fast Food: 9,268
+Chinese: 5,066
+Sichuan: 4,812
+Biryani: 3,462
+Shake: 2,784
+North Indian: 2,436
+Street Food: 2,371
+
+BESTSELLER FLAG COUNTS
+1: 101,530
+
+NOTE: Counts are item records or cuisine tags, not unique restaurants.
+Price and rating fields reflect this dataset's definitions and coverage.

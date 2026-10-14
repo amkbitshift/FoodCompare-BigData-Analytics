@@ -1,0 +1,6 @@
+﻿Dataset,Rows,Columns,Status,Findings,Action
+Swiggy,139321,10,Normalized,"27 missing cuisines; 14,436 missing rating counts; 1,752 missing offer names; 2 missing areas. NEW and rating-count labels handled in analysis-ready file.",Created swiggy_analysis_ready.csv
+Zomato,101530,26,Initial validation passed,No blank fields detected. Ratings and binary flags passed checks. Log_Price uses ln(Prices + 1). Price_per_Vote formula matches inspected records.,Retained zomato_cleaned.csv
+Grubhub,8088,27,Initial numeric validation passed,231 missing is_gh values and 22 missing restaurant_tags. Checked numeric fields were within expected ranges.,Retained grubhub_cleaned.csv
+Restaurants,63469,11,Coordinates corrected,"28,167 missing scores and ratings; 10,617 missing price ranges; 453 missing addresses; 516 missing ZIP codes. 40 invalid zero-coordinate pairs marked missing.",Created restaurants_analysis_ready.csv
+Restaurant menus,5082180,5,Prices prepared,"1,439,670 missing descriptions; 3 negative prices marked missing; 174,251 zero-priced items retained. No missing IDs, categories, item names, or prices were found in the cleaned source.",Created restaurant_menus_analysis_ready.csv

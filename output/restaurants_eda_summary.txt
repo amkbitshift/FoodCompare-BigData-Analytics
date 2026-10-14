@@ -1,0 +1,67 @@
+RESTAURANTS DATASET: EXPLORATORY DATA ANALYSIS
+==================================================
+
+Total restaurant records: 63,469
+Records with coordinate pairs in valid geographic ranges: 63,429
+Records without valid coordinate pairs: 40
+
+Restaurant score (score)
+  Valid values: 35,302
+  Missing or invalid values: 28,167
+  Average: 4.551
+  Minimum: 1.3
+  Maximum: 5.0
+
+Review count (ratings)
+  Valid values: 35,302
+  Missing or invalid values: 28,167
+  Average: 74.887
+  Minimum: 10.0
+  Maximum: 500.0
+
+Restaurant position (position)
+  Valid values: 63,469
+  Missing or invalid values: 0
+  Average: 86.692
+  Minimum: 1.0
+  Maximum: 300.0
+
+Latitude (lat)
+  Valid values: 63,429
+  Missing or invalid values: 40
+  Average: 36.608
+  Minimum: 18.3329876
+  Maximum: 48.96395
+
+Longitude (lng)
+  Valid values: 63,429
+  Missing or invalid values: 40
+  Average: -96.776
+  Minimum: -123.84124
+  Maximum: -65.96904
+
+TOP 10 RESTAURANT CATEGORIES
+Burgers, American, Sandwiches: 2,439
+Mexican, Latin American, New Mexican: 2,273
+Fast Food, Sandwich, American: 1,196
+American, Burgers, Fast Food: 995
+Pizza, American, Italian: 961
+Burritos, Fast Food, Mexican: 637
+American, Burgers, Sandwiches: 632
+American, burger, Fast Food: 602
+Coffee and Tea, American, Breakfast and Brunch: 585
+American, Fast Food, Burgers: 556
+
+TOP 10 ADDRESS GROUPS
+75034: 336
+77004: 225
+77494: 220
+77057: 219
+77479: 186
+78613: 185
+98052: 185
+75081: 185
+78704: 185
+22314: 185
+
+Note: Address grouping uses the final comma-separated address component and may not represent a consistent city or region.

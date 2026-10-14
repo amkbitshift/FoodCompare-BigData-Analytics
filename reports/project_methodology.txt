@@ -1,0 +1,55 @@
+# Comparative Big Data Analytics of Online Food Delivery Platforms
+
+## 1. Project Objective
+
+To analyze restaurant and online food delivery datasets using data cleaning, quality assessment, exploratory data analysis (EDA), and visualization. The project investigates restaurant ratings, listed prices, delivery estimates, restaurant categories, cuisines, and menu-item data.
+
+## 2. Technologies Used
+
+- Python
+- Apache Spark (PySpark)
+- Pandas/CSV processing where applicable
+- Matplotlib
+- SQLite for large-dataset processing where applicable
+- Anaconda and Java
+
+## 3. Data Processing Methodology
+
+### Step 1: Dataset Audit
+Identified available datasets and reviewed their dimensions, columns, and basic characteristics.
+
+### Step 2: Data Cleaning
+Removed exact duplicate records where applicable, trimmed text fields, and retained cleaned outputs separately from the original source files.
+
+### Step 3: Data Quality Assessment
+Examined missing values, invalid numeric values, unusual prices, rating formats, and coordinate anomalies.
+
+### Step 4: Analysis-Ready Data Preparation
+Normalized selected fields, preserved meaningful rating labels, and handled invalid coordinate and price values without silently deleting entire records.
+
+### Step 5: Exploratory Data Analysis
+Calculated descriptive statistics and record counts for ratings, prices, delivery metrics, restaurant locations, cuisines, and menu categories.
+
+### Step 6: Visualization
+Prepared charts to communicate selected patterns in the datasets.
+
+## 4. Datasets
+
+The project includes datasets relating to Swiggy, Zomato, Grubhub, restaurant listings, and restaurant menus. Additional source files may be retained for audit and comparison.
+
+## 5. Important Limitations
+
+- The datasets may represent different geographical regions and collection periods.
+- The unit of observation differs: some records represent restaurants, while others represent menu items or restaurant listings.
+- Rating definitions and price fields may differ across sources.
+- Currency and distance units must be verified before cross-dataset comparisons.
+- Historical delivery estimates and fees must not be presented as current values.
+- Record counts should not automatically be interpreted as unique restaurant counts.
+
+## 6. Reproducibility
+
+Processing scripts are stored in the `scripts` folder, cleaned and analysis-ready datasets are stored in `output`, and generated summaries and visualizations are stored in their respective output locations.
+
+## 7. Conclusion
+
+The project establishes a data-processing and exploratory-analysis workflow for heterogeneous food-delivery datasets. Further standardized comparisons should be conducted only after confirming compatible metric definitions, currencies, geographical coverage, and observation units.

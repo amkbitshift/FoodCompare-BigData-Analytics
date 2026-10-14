@@ -1,0 +1,48 @@
+BIG DATA PROJECT - DATA QUALITY SUMMARY
+=======================================================
+
+Datasets reviewed: 5
+Total rows across datasets: 5,394,588
+
+-------------------------------------------------------
+Dataset: Swiggy
+Rows: 139,321
+Columns: 10
+Status: Normalized
+Findings: 27 missing cuisines; 14,436 missing rating counts; 1,752 missing offer names; 2 missing areas. NEW and rating-count labels handled in analysis-ready file.
+Action: Created swiggy_analysis_ready.csv
+
+-------------------------------------------------------
+Dataset: Zomato
+Rows: 101,530
+Columns: 26
+Status: Initial validation passed
+Findings: No blank fields detected. Ratings and binary flags passed checks. Log_Price uses ln(Prices + 1). Price_per_Vote formula matches inspected records.
+Action: Retained zomato_cleaned.csv
+
+-------------------------------------------------------
+Dataset: Grubhub
+Rows: 8,088
+Columns: 27
+Status: Initial numeric validation passed
+Findings: 231 missing is_gh values and 22 missing restaurant_tags. Checked numeric fields were within expected ranges.
+Action: Retained grubhub_cleaned.csv
+
+-------------------------------------------------------
+Dataset: Restaurants
+Rows: 63,469
+Columns: 11
+Status: Coordinates corrected
+Findings: 28,167 missing scores and ratings; 10,617 missing price ranges; 453 missing addresses; 516 missing ZIP codes. 40 invalid zero-coordinate pairs marked missing.
+Action: Created restaurants_analysis_ready.csv
+
+-------------------------------------------------------
+Dataset: Restaurant menus
+Rows: 5,082,180
+Columns: 5
+Status: Prices prepared
+Findings: 1,439,670 missing descriptions; 3 negative prices marked missing; 174,251 zero-priced items retained. No missing IDs, categories, item names, or prices were found in the cleaned source.
+Action: Created restaurant_menus_analysis_ready.csv
+
+IMPORTANT LIMITATIONS
+The datasets may differ in geography, currency, collection date, and unit of observation. Direct platform comparisons require checking these differences and harmonizing comparable fields first. Initial validation does not prove that every record is accurate.

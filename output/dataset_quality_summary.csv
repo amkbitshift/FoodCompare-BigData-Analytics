@@ -1,0 +1,4 @@
+file_name,total_rows,duplicate_rows,columns,missing_cells
+swiggy_file.csv,659837,492434,10,4379448
+enhanced_zomato_dataset_clean.csv,123657,22127,26,0
+grubhub.csv,8088,0,27,235

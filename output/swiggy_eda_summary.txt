@@ -1,0 +1,44 @@
+SWIGGY EXPLORATORY DATA ANALYSIS
+=============================================
+
+Total restaurant/menu records: 139,321
+Records with numeric ratings: 105,864
+Average numeric rating: 4.038305750774395
+Minimum numeric rating: 1.0
+Maximum numeric rating: 5.0
+
+Records with extractable prices: 139,321
+Average listed price for two: 270.34255424523224
+Minimum listed price for two: 1.0
+Maximum listed price for two: 199246.0
+
+Vegetarian records: 58,495
+Non-vegetarian records: 80,826
+
+TOP 10 CITIES BY RECORD COUNT
+Kanpur: 2,000
+Central-Goa: 1,998
+Hyderabad: 1,998
+Indore: 1,998
+Nagpur: 1,998
+Vadodara: 1,998
+Lucknow: 1,996
+Jaipur: 1,990
+Kanchrapara: 1,977
+Kolkata: 1,974
+
+TOP 10 CUISINES BY RECORD COUNT
+Chinese: 37,527
+North Indian: 28,722
+Indian: 23,160
+Snacks: 17,339
+Biryani: 14,942
+Fast Food: 13,416
+Beverages: 13,118
+South Indian: 12,275
+Pizzas: 12,059
+Bakery: 9,044
+
+OFFER NAME COUNTS
+Has offer name: 137,569
+No offer name: 1,752

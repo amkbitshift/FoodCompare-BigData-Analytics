@@ -1,0 +1,10 @@
+file_name,rows,columns,missing_cells,status
+cleaned_data.csv,35251,11,53,success
+Doordash.csv,1200,38,3200,success
+enhanced_zomato_dataset_clean.csv,123657,26,0,success
+Foodpanda Analysis Dataset.csv,6000,20,0,success
+grubhub.csv,8088,27,235,success
+restaurant-menus.csv,5523368,5,3015109,success
+restaurants.csv,63594,11,68901,success
+Swiggy.csv,13407012,17,9466652,success
+swiggy_file.csv,659837,10,4379448,success

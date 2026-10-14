@@ -1,0 +1,15 @@
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+datasets/restaurant-menus.csv
+datasets/Swiggy.csv
+output/restaurant_menus_analysis_ready.csv
+output/restaurant_menus_cleaned.csv

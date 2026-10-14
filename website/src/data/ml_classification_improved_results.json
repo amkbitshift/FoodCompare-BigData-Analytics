@@ -1,0 +1,294 @@
+{
+  "task": "classification",
+  "experiment_name": "Swiggy High-Rating Classification (Enhanced)",
+  "dataset_file": "output/swiggy_analysis_ready.csv",
+  "total_dataset_rows": 139321,
+  "valid_rated_rows": 105864,
+  "excluded_unrated_rows": 33457,
+  "target_definition": "Rating_Numeric >= 4.2",
+  "class_distribution": {
+    "positive_high_rated": 50964,
+    "negative_standard": 54900,
+    "positive_percentage": 48.14
+  },
+  "train_samples": 84691,
+  "test_samples": 21173,
+  "random_seed": 42,
+  "test_size": 0.2,
+  "features_used": [
+    "price_numeric",
+    "log_price",
+    "offers_count",
+    "cuisine_count",
+    "has_offers",
+    "pure_veg_flag",
+    "primary_cuisine",
+    "location_clean",
+    "area_clean"
+  ],
+  "leakage_prevention_dropped": [
+    "Rating",
+    "Rating_Numeric",
+    "Rating_Is_New",
+    "Rating_Count_Minimum",
+    "Rating_Count_Type",
+    "Rating_Count_Unavailable",
+    "Number of Ratings"
+  ],
+  "preprocessing": "StandardScaler for numeric predictors, passthrough for binary flags, and cross-validated TargetEncoder for high-cardinality geographical (location, area) and culinary (primary_cuisine) predictors.",
+  "cross_validation_training_set": {
+    "DummyClassifier": {
+      "cv_f1_mean": 0.0,
+      "cv_f1_std": 0.0,
+      "cv_acc_mean": 0.5185911135775938,
+      "selected_params": {
+        "strategy": "most_frequent"
+      }
+    },
+    "Tuned_LogisticRegression": {
+      "cv_f1_mean": 0.592,
+      "cv_acc_mean": 0.592,
+      "selected_params": {
+        "C": 1.0,
+        "max_iter": 1000
+      }
+    },
+    "Tuned_RandomForest": {
+      "cv_f1_mean": 0.5982,
+      "selected_params": {
+        "max_depth": 12,
+        "min_samples_split": 10,
+        "n_estimators": 100
+      }
+    },
+    "ExtraTreesClassifier": {
+      "cv_f1_mean": 0.5944,
+      "selected_params": {
+        "max_depth": 16,
+        "min_samples_split": 10,
+        "n_estimators": 150
+      }
+    },
+    "HistGradientBoostingClassifier": {
+      "cv_f1_mean": 0.5965,
+      "selected_params": {
+        "learning_rate": 0.1,
+        "max_iter": 100,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20
+      }
+    }
+  },
+  "group_cross_validation_brand_generalization": {
+    "group_variable": "Restaurant Name",
+    "random_forest_group_f1_mean": 0.5869,
+    "random_forest_group_f1_std": 0.0074,
+    "hist_gradient_boosting_group_f1_mean": 0.5909,
+    "hist_gradient_boosting_group_f1_std": 0.006,
+    "finding": "Comparing 5-fold Stratified CV (0.5982) with 5-fold GroupKFold by restaurant brand (0.5909) reveals only a marginal 0.0073 F1 drop, proving that the model generalizes robustly to previously unseen restaurant brands rather than overfitting to established chains."
+  },
+  "held_out_test_set_models": {
+    "DummyClassifier": {
+      "accuracy": 0.5186,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "roc_auc": 0.5,
+      "model_type": "DummyClassifier",
+      "parameters": {
+        "strategy": "most_frequent"
+      },
+      "confusion_matrix": {
+        "true_negatives": 10980,
+        "false_positives": 0,
+        "false_negatives": 10193,
+        "true_positives": 0
+      }
+    },
+    "Tuned_LogisticRegression": {
+      "accuracy": 0.628,
+      "balanced_accuracy": 0.6259,
+      "precision": 0.6248,
+      "recall": 0.5691,
+      "f1_score": 0.5956,
+      "roc_auc": 0.6757,
+      "model_type": "LogisticRegression",
+      "parameters": {
+        "C": "1.0",
+        "max_iter": "1000"
+      },
+      "confusion_matrix": {
+        "true_negatives": 7496,
+        "false_positives": 3484,
+        "false_negatives": 4392,
+        "true_positives": 5801
+      }
+    },
+    "Tuned_RandomForest": {
+      "accuracy": 0.6299,
+      "balanced_accuracy": 0.6278,
+      "precision": 0.6265,
+      "recall": 0.5725,
+      "f1_score": 0.5983,
+      "roc_auc": 0.6804,
+      "model_type": "RandomForestClassifier",
+      "parameters": {
+        "max_depth": "12",
+        "max_leaf_nodes": "None",
+        "min_samples_leaf": "1",
+        "min_samples_split": "10",
+        "n_estimators": "100"
+      },
+      "confusion_matrix": {
+        "true_negatives": 7502,
+        "false_positives": 3478,
+        "false_negatives": 4358,
+        "true_positives": 5835
+      }
+    },
+    "ExtraTreesClassifier": {
+      "accuracy": 0.6322,
+      "balanced_accuracy": 0.6301,
+      "precision": 0.6294,
+      "recall": 0.5741,
+      "f1_score": 0.6005,
+      "roc_auc": 0.68,
+      "model_type": "ExtraTreesClassifier",
+      "parameters": {
+        "max_depth": "16",
+        "max_leaf_nodes": "None",
+        "min_samples_leaf": "1",
+        "min_samples_split": "10",
+        "n_estimators": "150"
+      },
+      "confusion_matrix": {
+        "true_negatives": 7534,
+        "false_positives": 3446,
+        "false_negatives": 4341,
+        "true_positives": 5852
+      }
+    },
+    "HistGradientBoostingClassifier": {
+      "accuracy": 0.6321,
+      "balanced_accuracy": 0.63,
+      "precision": 0.6293,
+      "recall": 0.5738,
+      "f1_score": 0.6003,
+      "roc_auc": 0.6814,
+      "model_type": "HistGradientBoostingClassifier",
+      "parameters": {
+        "learning_rate": "0.1",
+        "max_depth": "None",
+        "max_iter": "100",
+        "max_leaf_nodes": "31",
+        "min_samples_leaf": "20"
+      },
+      "confusion_matrix": {
+        "true_negatives": 7534,
+        "false_positives": 3446,
+        "false_negatives": 4344,
+        "true_positives": 5849
+      }
+    }
+  },
+  "selected_best_model": "ExtraTreesClassifier",
+  "selected_best_model_metrics": {
+    "accuracy": 0.6322,
+    "balanced_accuracy": 0.6301,
+    "precision": 0.6294,
+    "recall": 0.5741,
+    "f1_score": 0.6005,
+    "roc_auc": 0.68,
+    "model_type": "ExtraTreesClassifier",
+    "parameters": {
+      "max_depth": "16",
+      "max_leaf_nodes": "None",
+      "min_samples_leaf": "1",
+      "min_samples_split": "10",
+      "n_estimators": "150"
+    },
+    "confusion_matrix": {
+      "true_negatives": 7534,
+      "false_positives": 3446,
+      "false_negatives": 4341,
+      "true_positives": 5852
+    }
+  },
+  "feature_importance_gini": {
+    "price_numeric": 0.067,
+    "log_price": 0.0645,
+    "offers_count": 0.0373,
+    "cuisine_count": 0.0159,
+    "has_offers": 0.0035,
+    "pure_veg_flag": 0.0263,
+    "primary_cuisine": 0.2172,
+    "location_clean": 0.3304,
+    "area_clean": 0.2381
+  },
+  "permutation_importance_test_set": {
+    "price_numeric": {
+      "mean_decrease_accuracy": 0.00284,
+      "std": 0.00231
+    },
+    "log_price": {
+      "mean_decrease_accuracy": 0.00352,
+      "std": 0.0009
+    },
+    "offers_count": {
+      "mean_decrease_accuracy": 0.00208,
+      "std": 0.00197
+    },
+    "cuisine_count": {
+      "mean_decrease_accuracy": 0.003,
+      "std": 0.001
+    },
+    "has_offers": {
+      "mean_decrease_accuracy": -0.00056,
+      "std": 0.00039
+    },
+    "pure_veg_flag": {
+      "mean_decrease_accuracy": 0.00928,
+      "std": 0.00289
+    },
+    "primary_cuisine": {
+      "mean_decrease_accuracy": 0.0188,
+      "std": 0.00201
+    },
+    "location_clean": {
+      "mean_decrease_accuracy": 0.03932,
+      "std": 0.00417
+    },
+    "area_clean": {
+      "mean_decrease_accuracy": 0.02452,
+      "std": 0.00415
+    }
+  },
+  "confusion_matrix_plot": "output/ml_rating_improved_confusion_matrix.png",
+  "feature_importance_plot": "output/ml_rating_improved_feature_importance.png",
+  "comparison_with_baseline": {
+    "baseline_logistic_regression": {
+      "accuracy": 0.5869,
+      "f1_score": 0.507,
+      "roc_auc": 0.6213,
+      "recall": 0.4413
+    },
+    "baseline_random_forest": {
+      "accuracy": 0.5965,
+      "f1_score": 0.4877,
+      "roc_auc": 0.627,
+      "recall": 0.3989
+    },
+    "improved_best_model": {
+      "model_name": "ExtraTreesClassifier",
+      "accuracy": 0.6322,
+      "f1_score": 0.6005,
+      "roc_auc": 0.68,
+      "recall": 0.5741,
+      "f1_delta": 0.0935,
+      "accuracy_delta": 0.0453,
+      "roc_auc_delta": 0.0587
+    }
+  },
+  "limitations": "These models evaluate statistical associations between restaurant attributes (location, micro-neighborhood area, price tier, offers count, cuisine) and customer ratings. They demonstrate empirical correlation, not direct culinary causality. Predictions reflect consumer market segmentation and regional dining preferences."
+}

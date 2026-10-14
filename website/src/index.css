@@ -1,0 +1,313 @@
+/* FoodCompare — Premium Food Discovery & Comparison Platform */
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Brand Palette: Warm Ivory, Deep Charcoal, Tomato-Red/Coral */
+  --bg-app: #FAF8F5;          /* Warm ivory background */
+  --bg-surface: #FFFFFF;      /* Clean crisp white cards */
+  --bg-subtle: #F3EFEA;       /* Off-white warm neutral */
+  --bg-muted: #EBE5DC;        /* Slightly darker warm tone */
+  
+  /* Borders */
+  --border-light: #F3EFEA;
+  --border-default: #E7E2DA;  /* Warm subtle border */
+  --border-medium: #D5CFC5;
+  --border-dark: #A8A29E;
+  
+  /* Typography */
+  --text-primary: #1C1917;    /* Deep charcoal */
+  --text-secondary: #44403C;  /* Warm stone dark */
+  --text-muted: #78716C;      /* Warm stone muted */
+  --text-inverse: #FFFFFF;
+  
+  /* Primary Accent: Tomato-Red / Coral */
+  --coral-50: #FFF1F2;
+  --coral-100: #FFE4E6;
+  --coral-200: #FECDD3;
+  --coral-500: #F43F5E;
+  --coral-600: #E23744;       /* Primary FoodCompare Accent */
+  --coral-700: #BE123C;
+  --coral-800: #9F1239;
+  
+  /* Secondary Accents */
+  --navy-900: #0F172A;
+  --navy-800: #1E293B;
+  --slate-700: #334155;
+  
+  /* Semantic Badges */
+  --green-600: #16A34A;
+  --green-50: #F0FDF4;
+  --green-border: #BBF7D0;
+  
+  --amber-600: #D97706;
+  --amber-50: #FFFBEB;
+  --amber-border: #FDE68A;
+
+  --blue-600: #2563EB;
+  --blue-50: #EFF6FF;
+  --blue-border: #BFDBFE;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(28, 25, 23, 0.04);
+  --shadow-sm: 0 2px 4px 0 rgba(28, 25, 23, 0.06), 0 1px 2px -1px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 6px 12px -2px rgba(28, 25, 23, 0.08), 0 3px 6px -3px rgba(28, 25, 23, 0.05);
+  --shadow-lg: 0 12px 24px -4px rgba(28, 25, 23, 0.12), 0 4px 8px -4px rgba(28, 25, 23, 0.06);
+  --shadow-drawer: -4px 0 24px rgba(28, 25, 23, 0.16);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --navbar-height: 68px;
+  --max-content-width: 1280px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  line-height: 1.2;
+}
+
+.btn:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-medium);
+}
+
+.btn-primary {
+  background-color: var(--coral-600);
+  border-color: var(--coral-600);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #C52733;
+  border-color: #C52733;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: var(--navy-900);
+  border-color: var(--navy-900);
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-outline-coral {
+  background-color: transparent;
+  border-color: var(--coral-600);
+  color: var(--coral-600);
+  font-weight: 600;
+}
+
+.btn-outline-coral:hover {
+  background-color: var(--coral-50);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 12px 24px;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+}
+
+/* Badges & Pills */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.badge-coral {
+  background-color: var(--coral-50);
+  color: var(--coral-700);
+  border: 1px solid var(--coral-200);
+}
+
+.badge-green {
+  background-color: var(--green-50);
+  color: var(--green-600);
+  border: 1px solid var(--green-border);
+}
+
+.badge-amber {
+  background-color: var(--amber-50);
+  color: var(--amber-600);
+  border: 1px solid var(--amber-border);
+}
+
+.badge-blue {
+  background-color: var(--blue-50);
+  color: var(--blue-600);
+  border: 1px solid var(--blue-border);
+}
+
+.badge-neutral {
+  background-color: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+}
+
+/* Platform Brand Colors */
+.platform-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.platform-swiggy {
+  background-color: #FFF7ED;
+  color: #C2410C;
+  border: 1px solid #FFEDD5;
+}
+.platform-zomato {
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FEE2E2;
+}
+.platform-grubhub {
+  background-color: #FFF1F2;
+  color: #E11D48;
+  border: 1px solid #FFE4E6;
+}
+.platform-doordash {
+  background-color: #FEF2F2;
+  color: #EF4444;
+  border: 1px solid #FEE2E2;
+}
+.platform-foodpanda {
+  background-color: #FDF2F8;
+  color: #DB2777;
+  border: 1px solid #FCE7F3;
+}
+
+/* Food Cards */
+.food-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+/* Overlay & Drawer */
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(28, 25, 23, 0.45);
+  backdrop-filter: blur(3px);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.comparison-drawer {
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--bg-surface);
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: var(--shadow-drawer);
+  display: flex;
+  flex-direction: column;
+  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .comparison-drawer {
+    max-width: 100%;
+  }
+}

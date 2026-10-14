@@ -1,0 +1,93 @@
+{
+  "task": "regression",
+  "experiment_name": "Grubhub Delivery Time Regression",
+  "dataset_file": "output/grubhub_cleaned.csv",
+  "total_dataset_rows": 8088,
+  "valid_target_rows": 8088,
+  "excluded_rows": 0,
+  "target_variable": "delivery_time",
+  "target_unit": "minutes",
+  "target_distribution": {
+    "mean": 42.54,
+    "std": 14.42,
+    "median": 40.0,
+    "min": 17.5,
+    "max": 127.5
+  },
+  "train_samples": 6470,
+  "test_samples": 1618,
+  "random_seed": 42,
+  "test_size": 0.2,
+  "features_used": [
+    "distance",
+    "delivery_fee",
+    "service_fee",
+    "review_count",
+    "review_rating",
+    "searched_metro_clean",
+    "is_gh_clean",
+    "primary_cuisine",
+    "delivery_type_clean"
+  ],
+  "leakage_prevention_dropped": [
+    "delivery_time_raw",
+    "loc_number",
+    "loc_name",
+    "url",
+    "address",
+    "searched_address",
+    "searched_zipcode",
+    "phone",
+    "RunDate",
+    "restaurant_tags"
+  ],
+  "models_evaluated": {
+    "DummyRegressor": {
+      "mae": 11.3829,
+      "mse": 216.4008,
+      "rmse": 14.7106,
+      "r2_score": -0.0016,
+      "model_type": "DummyRegressor",
+      "parameters": {
+        "strategy": "mean"
+      }
+    },
+    "Ridge": {
+      "mae": 7.6583,
+      "mse": 109.0369,
+      "rmse": 10.4421,
+      "r2_score": 0.4953,
+      "model_type": "Ridge",
+      "parameters": {
+        "alpha": "1.0"
+      }
+    },
+    "RandomForestRegressor": {
+      "mae": 6.5089,
+      "mse": 83.6542,
+      "rmse": 9.1463,
+      "r2_score": 0.6128,
+      "model_type": "RandomForestRegressor",
+      "parameters": {
+        "max_depth": "10",
+        "min_samples_split": "8",
+        "n_estimators": "100"
+      }
+    }
+  },
+  "selected_model": "RandomForestRegressor",
+  "selected_model_metrics": {
+    "mae": 6.5089,
+    "mse": 83.6542,
+    "rmse": 9.1463,
+    "r2_score": 0.6128,
+    "model_type": "RandomForestRegressor",
+    "parameters": {
+      "max_depth": "10",
+      "min_samples_split": "8",
+      "n_estimators": "100"
+    }
+  },
+  "predictions_plot": "output/ml_delivery_time_predictions.png",
+  "limitations": "These models capture statistical associations between delivery distance, platform fees, review volume, and historical delivery times. They do not constitute live dispatch tracking or real-time road traffic routing estimates."
+}

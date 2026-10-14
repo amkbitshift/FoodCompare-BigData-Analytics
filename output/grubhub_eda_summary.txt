@@ -1,0 +1,64 @@
+GRUBHUB EXPLORATORY DATA ANALYSIS
+=============================================
+
+Total restaurant records: 8,088
+
+Restaurant review rating (review_rating)
+  Valid records: 8,088
+  Average: 3.398
+  Minimum: 0.0
+  Maximum: 5.0
+  Missing or invalid: 0
+
+Review count (review_count)
+  Valid records: 8,088
+  Average: 442.943
+  Minimum: 0.0
+  Maximum: 13880.0
+  Missing or invalid: 0
+
+Delivery fee (delivery_fee)
+  Valid records: 8,088
+  Average: 2.447
+  Minimum: 0.0
+  Maximum: 19.99
+  Missing or invalid: 0
+
+Service fee (service_fee)
+  Valid records: 8,088
+  Average: 6.157
+  Minimum: 0.0
+  Maximum: 21.0
+  Missing or invalid: 0
+
+Estimated delivery time (delivery_time)
+  Valid records: 8,088
+  Average: 42.542
+  Minimum: 17.5
+  Maximum: 127.5
+  Missing or invalid: 0
+
+Restaurant distance (distance)
+  Valid records: 8,088
+  Average: 1.130
+  Minimum: 0.01
+  Maximum: 2.0
+  Missing or invalid: 0
+
+TOP 10 RESTAURANT TAG GROUPS
+["PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]: 3,501
+["SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]: 2,260
+["SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER", "VIRTUAL"]: 1,480
+["PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER", "VIRTUAL"]: 266
+["NONCONTRACTUAL", "CALL_AHEAD_CENTER_ELIGIBLE", "ALLOWS_PHONE_AHEAD_ORDERS"]: 113
+["NONCONTRACTUAL", "PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "CALL_AHEAD_CENTER_ELIGIBLE", "ALLOWS_PHONE_AHEAD_ORDERS", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]: 83
+["NONCONTRACTUAL", "PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "CALL_AHEAD_CENTER_ELIGIBLE", "ALLOWS_PHONE_AHEAD_ORDERS"]: 73
+["PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "OPTED_OUT_OF_SCHEDULED_ORDERS", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]: 63
+["BLACK_OWNED", "PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]: 47
+["OPTED_OUT_OF_SCHEDULED_ORDERS", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]: 34
+
+IS GRUBHUB FLAG COUNTS
+$0 with GH+: 7,857
+Missing: 231
+
+Note: Fees and delivery times describe this dataset's snapshot. They may not represent current prices or delivery estimates.

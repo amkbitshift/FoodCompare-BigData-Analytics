@@ -1,0 +1,97 @@
+{
+  "task": "classification",
+  "experiment_name": "Swiggy High-Rating Classification",
+  "dataset_file": "output/swiggy_analysis_ready.csv",
+  "total_dataset_rows": 139321,
+  "valid_rated_rows": 105864,
+  "excluded_unrated_rows": 33457,
+  "target_definition": "Rating_Numeric >= 4.2",
+  "class_distribution": {
+    "positive_high_rated": 50964,
+    "negative_standard": 54900,
+    "positive_percentage": 48.14
+  },
+  "train_samples": 84691,
+  "test_samples": 21173,
+  "random_seed": 42,
+  "test_size": 0.2,
+  "features_used": [
+    "price_numeric",
+    "offers_count",
+    "pure_veg_flag",
+    "primary_cuisine",
+    "location_clean"
+  ],
+  "leakage_prevention_dropped": [
+    "Rating",
+    "Rating_Numeric",
+    "Rating_Is_New",
+    "Rating_Count_Minimum",
+    "Rating_Count_Type",
+    "Rating_Count_Unavailable",
+    "Number of Ratings"
+  ],
+  "models_evaluated": {
+    "DummyClassifier": {
+      "accuracy": 0.5186,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "roc_auc": 0.5,
+      "model_type": "DummyClassifier",
+      "parameters": {
+        "strategy": "most_frequent"
+      }
+    },
+    "LogisticRegression": {
+      "accuracy": 0.5869,
+      "balanced_accuracy": 0.5817,
+      "precision": 0.5958,
+      "recall": 0.4413,
+      "f1_score": 0.507,
+      "roc_auc": 0.6213,
+      "model_type": "LogisticRegression",
+      "parameters": {
+        "C": "1.0",
+        "max_iter": "1000"
+      }
+    },
+    "RandomForestClassifier": {
+      "accuracy": 0.5965,
+      "balanced_accuracy": 0.5894,
+      "precision": 0.6273,
+      "recall": 0.3989,
+      "f1_score": 0.4877,
+      "roc_auc": 0.627,
+      "model_type": "RandomForestClassifier",
+      "parameters": {
+        "max_depth": "12",
+        "min_samples_split": "10",
+        "n_estimators": "100"
+      }
+    }
+  },
+  "selected_model": "LogisticRegression",
+  "selected_model_metrics": {
+    "accuracy": 0.5869,
+    "balanced_accuracy": 0.5817,
+    "precision": 0.5958,
+    "recall": 0.4413,
+    "f1_score": 0.507,
+    "roc_auc": 0.6213,
+    "model_type": "LogisticRegression",
+    "parameters": {
+      "C": "1.0",
+      "max_iter": "1000"
+    }
+  },
+  "selected_model_confusion_matrix": {
+    "true_negatives": 7928,
+    "false_positives": 3052,
+    "false_negatives": 5695,
+    "true_positives": 4498
+  },
+  "confusion_matrix_plot": "output/ml_rating_confusion_matrix.png",
+  "limitations": "These models evaluate statistical associations between restaurant attributes (location, price, offers, cuisine) and customer ratings. They demonstrate correlation, not direct causality. A high prediction reflects market segmentation patterns rather than objective culinary quality."
+}

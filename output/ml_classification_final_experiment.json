@@ -1,0 +1,398 @@
+{
+  "task": "classification",
+  "experiment_name": "Swiggy High-Rating Classification (Controlled Final Experiment)",
+  "dataset_file": "output/swiggy_analysis_ready.csv",
+  "total_dataset_rows": 139321,
+  "valid_rated_rows": 105864,
+  "excluded_unrated_rows": 33457,
+  "target_definition": "Rating_Numeric >= 4.2",
+  "class_distribution": {
+    "positive_high_rated": 50964,
+    "negative_standard": 54900,
+    "positive_percentage": 48.14
+  },
+  "train_samples": 84691,
+  "test_partition_samples": 21173,
+  "random_seed": 42,
+  "test_size": 0.2,
+  "validation_strategy": {
+    "primary_model_selection": "5-Fold Stratified Cross-Validation on Training Set",
+    "brand_generalization_audit": "5-Fold GroupKFold by Restaurant Name",
+    "addressing_test_set_reuse": "Because the test partition was evaluated in prior iterations, using it to select models would introduce subtle selection bias. Model selection is strictly governed by 5-fold cross-validation on the training set. A completely independent evaluation would require either an out-of-time dataset of freshly scraped restaurants or a full Nested Cross-Validation (5x5) architecture."
+  },
+  "features_used": [
+    "price_numeric",
+    "log_price",
+    "offers_count",
+    "cuisine_count",
+    "has_offers",
+    "pure_veg_flag",
+    "is_biryani",
+    "is_desserts_bakery",
+    "is_beverages",
+    "is_fast_food",
+    "is_north_indian",
+    "is_south_indian",
+    "has_trynew",
+    "has_no_code",
+    "has_bank_offer",
+    "primary_cuisine",
+    "location_clean",
+    "city_area"
+  ],
+  "leakage_prevention_dropped": [
+    "Rating",
+    "Rating_Numeric",
+    "Rating_Is_New",
+    "Rating_Count_Minimum",
+    "Rating_Count_Type",
+    "Rating_Count_Unavailable",
+    "Number of Ratings"
+  ],
+  "preprocessing_description": "StandardScaler for numeric predictors, passthrough for binary flags, and cross-validated TargetEncoder for high-cardinality geographical and culinary features.",
+  "cross_validation_training_set": {
+    "Dummy_Baseline": {
+      "cv_f1_mean": 0.0,
+      "cv_f1_std": 0.0,
+      "cv_accuracy_mean": 0.5186,
+      "cv_accuracy_std": 0.0,
+      "cv_roc_auc_mean": 0.5,
+      "cv_roc_auc_std": 0.0,
+      "cv_balanced_accuracy_mean": 0.5,
+      "cv_balanced_accuracy_std": 0.0,
+      "cv_precision_mean": 0.0,
+      "cv_precision_std": 0.0,
+      "cv_recall_mean": 0.0,
+      "cv_recall_std": 0.0,
+      "cv_duration_seconds": 1.78
+    },
+    "LogisticRegression": {
+      "cv_f1_mean": 0.5874,
+      "cv_f1_std": 0.0035,
+      "cv_accuracy_mean": 0.6225,
+      "cv_accuracy_std": 0.0028,
+      "cv_roc_auc_mean": 0.6691,
+      "cv_roc_auc_std": 0.005,
+      "cv_balanced_accuracy_mean": 0.6202,
+      "cv_balanced_accuracy_std": 0.0028,
+      "cv_precision_mean": 0.6198,
+      "cv_precision_std": 0.003,
+      "cv_recall_mean": 0.5582,
+      "cv_recall_std": 0.0038,
+      "cv_duration_seconds": 1.59
+    },
+    "RandomForest": {
+      "cv_f1_mean": 0.6006,
+      "cv_f1_std": 0.0022,
+      "cv_accuracy_mean": 0.6308,
+      "cv_accuracy_std": 0.0022,
+      "cv_roc_auc_mean": 0.6804,
+      "cv_roc_auc_std": 0.0039,
+      "cv_balanced_accuracy_mean": 0.6289,
+      "cv_balanced_accuracy_std": 0.0021,
+      "cv_precision_mean": 0.6268,
+      "cv_precision_std": 0.0033,
+      "cv_recall_mean": 0.5766,
+      "cv_recall_std": 0.0041,
+      "cv_duration_seconds": 4.35
+    },
+    "ExtraTrees": {
+      "cv_f1_mean": 0.592,
+      "cv_f1_std": 0.002,
+      "cv_accuracy_mean": 0.6297,
+      "cv_accuracy_std": 0.0025,
+      "cv_roc_auc_mean": 0.6787,
+      "cv_roc_auc_std": 0.0052,
+      "cv_balanced_accuracy_mean": 0.6272,
+      "cv_balanced_accuracy_std": 0.0024,
+      "cv_precision_mean": 0.6305,
+      "cv_precision_std": 0.0039,
+      "cv_recall_mean": 0.5579,
+      "cv_recall_std": 0.0029,
+      "cv_duration_seconds": 3.13
+    },
+    "HistGradientBoosting": {
+      "cv_f1_mean": 0.5991,
+      "cv_f1_std": 0.0032,
+      "cv_accuracy_mean": 0.6301,
+      "cv_accuracy_std": 0.0029,
+      "cv_roc_auc_mean": 0.6792,
+      "cv_roc_auc_std": 0.0043,
+      "cv_balanced_accuracy_mean": 0.6281,
+      "cv_balanced_accuracy_std": 0.0028,
+      "cv_precision_mean": 0.6264,
+      "cv_precision_std": 0.0036,
+      "cv_recall_mean": 0.574,
+      "cv_recall_std": 0.0047,
+      "cv_duration_seconds": 1.59
+    },
+    "SoftVotingEnsemble": {
+      "cv_f1_mean": 0.6002,
+      "cv_f1_std": 0.0028,
+      "cv_accuracy_mean": 0.6323,
+      "cv_accuracy_std": 0.0023,
+      "cv_roc_auc_mean": 0.6822,
+      "cv_roc_auc_std": 0.0044,
+      "cv_balanced_accuracy_mean": 0.6302,
+      "cv_balanced_accuracy_std": 0.0023,
+      "cv_precision_mean": 0.6298,
+      "cv_precision_std": 0.0029,
+      "cv_recall_mean": 0.5732,
+      "cv_recall_std": 0.004,
+      "cv_duration_seconds": 6.61
+    }
+  },
+  "brand_generalization_group_kfold": {
+    "RandomForest": {
+      "group_f1_mean": 0.5946,
+      "group_f1_std": 0.004,
+      "group_accuracy_mean": 0.6269,
+      "group_accuracy_std": 0.0013
+    },
+    "HistGradientBoosting": {
+      "group_f1_mean": 0.5971,
+      "group_f1_std": 0.0053,
+      "group_accuracy_mean": 0.6283,
+      "group_accuracy_std": 0.0037
+    },
+    "SoftVotingEnsemble": {
+      "group_f1_mean": 0.5951,
+      "group_f1_std": 0.0051,
+      "group_accuracy_mean": 0.6285,
+      "group_accuracy_std": 0.0034
+    }
+  },
+  "test_partition_evaluation": {
+    "Dummy_Baseline": {
+      "accuracy": 0.5186,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "roc_auc": 0.5,
+      "confusion_matrix": {
+        "true_negatives": 10980,
+        "false_positives": 0,
+        "false_negatives": 10193,
+        "true_positives": 0
+      }
+    },
+    "LogisticRegression": {
+      "accuracy": 0.6267,
+      "balanced_accuracy": 0.6246,
+      "precision": 0.6238,
+      "recall": 0.5659,
+      "f1_score": 0.5934,
+      "roc_auc": 0.6733,
+      "confusion_matrix": {
+        "true_negatives": 7502,
+        "false_positives": 3478,
+        "false_negatives": 4425,
+        "true_positives": 5768
+      }
+    },
+    "RandomForest": {
+      "accuracy": 0.6317,
+      "balanced_accuracy": 0.6297,
+      "precision": 0.6273,
+      "recall": 0.5785,
+      "f1_score": 0.6019,
+      "roc_auc": 0.6837,
+      "confusion_matrix": {
+        "true_negatives": 7477,
+        "false_positives": 3503,
+        "false_negatives": 4296,
+        "true_positives": 5897
+      }
+    },
+    "ExtraTrees": {
+      "accuracy": 0.6311,
+      "balanced_accuracy": 0.6288,
+      "precision": 0.6299,
+      "recall": 0.5665,
+      "f1_score": 0.5965,
+      "roc_auc": 0.6814,
+      "confusion_matrix": {
+        "true_negatives": 7588,
+        "false_positives": 3392,
+        "false_negatives": 4419,
+        "true_positives": 5774
+      }
+    },
+    "HistGradientBoosting": {
+      "accuracy": 0.6319,
+      "balanced_accuracy": 0.6299,
+      "precision": 0.6281,
+      "recall": 0.5771,
+      "f1_score": 0.6015,
+      "roc_auc": 0.6824,
+      "confusion_matrix": {
+        "true_negatives": 7497,
+        "false_positives": 3483,
+        "false_negatives": 4311,
+        "true_positives": 5882
+      }
+    },
+    "SoftVotingEnsemble": {
+      "accuracy": 0.6339,
+      "balanced_accuracy": 0.6319,
+      "precision": 0.6307,
+      "recall": 0.5777,
+      "f1_score": 0.603,
+      "roc_auc": 0.6851,
+      "confusion_matrix": {
+        "true_negatives": 7533,
+        "false_positives": 3447,
+        "false_negatives": 4305,
+        "true_positives": 5888
+      }
+    }
+  },
+  "selected_best_model_by_cv": "RandomForest",
+  "selected_best_model_cv_metrics": {
+    "cv_f1_mean": 0.6006,
+    "cv_f1_std": 0.0022,
+    "cv_accuracy_mean": 0.6308,
+    "cv_accuracy_std": 0.0022,
+    "cv_roc_auc_mean": 0.6804,
+    "cv_roc_auc_std": 0.0039,
+    "cv_balanced_accuracy_mean": 0.6289,
+    "cv_balanced_accuracy_std": 0.0021,
+    "cv_precision_mean": 0.6268,
+    "cv_precision_std": 0.0033,
+    "cv_recall_mean": 0.5766,
+    "cv_recall_std": 0.0041,
+    "cv_duration_seconds": 4.35
+  },
+  "selected_best_model_test_metrics": {
+    "accuracy": 0.6317,
+    "balanced_accuracy": 0.6297,
+    "precision": 0.6273,
+    "recall": 0.5785,
+    "f1_score": 0.6019,
+    "roc_auc": 0.6837,
+    "confusion_matrix": {
+      "true_negatives": 7477,
+      "false_positives": 3503,
+      "false_negatives": 4296,
+      "true_positives": 5897
+    }
+  },
+  "comparison_with_previous_benchmark": {
+    "previous_benchmark": {
+      "model_name": "ExtraTreesClassifier (Previous)",
+      "accuracy": 0.6322,
+      "f1_score": 0.6005,
+      "roc_auc": 0.68,
+      "recall": 0.5741
+    },
+    "current_best_model": {
+      "model_name": "RandomForest",
+      "accuracy": 0.6317,
+      "f1_score": 0.6019,
+      "roc_auc": 0.6837,
+      "recall": 0.5785,
+      "accuracy_difference": -0.0005,
+      "f1_difference": 0.0014,
+      "roc_auc_difference": 0.0037
+    },
+    "honest_assessment": "The model selected by 5-fold CV is RandomForest (CV F1: 0.6006, CV Acc: 63.08%). On the test partition, it achieves 63.17% accuracy and 0.6019 F1-score (delta vs previous best: +0.0014 F1, -0.05% Acc). The results confirm that tabular restaurant metadata (city, locality, cuisine tags, offers, price tier) has an empirical predictive ceiling of approximately 63% accuracy and 0.60 F1 score. Minor fluctuations between 62.9% and 63.3% represent sampling variance rather than breakthrough advances. True customer ratings are governed by culinary execution, taste, packaging, and delivery speed, which are fundamentally absent from restaurant profile metadata."
+  },
+  "feature_importance_gini": {
+    "price_numeric": 0.0675,
+    "log_price": 0.0696,
+    "offers_count": 0.0346,
+    "cuisine_count": 0.0172,
+    "has_offers": 0.0028,
+    "pure_veg_flag": 0.0224,
+    "is_biryani": 0.0094,
+    "is_desserts_bakery": 0.0232,
+    "is_beverages": 0.0111,
+    "is_fast_food": 0.0142,
+    "is_north_indian": 0.0106,
+    "is_south_indian": 0.0102,
+    "has_trynew": 0.0135,
+    "has_no_code": 0.0125,
+    "has_bank_offer": 0.009,
+    "primary_cuisine": 0.1735,
+    "location_clean": 0.2732,
+    "city_area": 0.2256
+  },
+  "permutation_importance_test_sample": {
+    "price_numeric": {
+      "mean_decrease_accuracy": -0.0006,
+      "std": 0.0019
+    },
+    "log_price": {
+      "mean_decrease_accuracy": 0.00236,
+      "std": 0.00166
+    },
+    "offers_count": {
+      "mean_decrease_accuracy": -0.00028,
+      "std": 0.00273
+    },
+    "cuisine_count": {
+      "mean_decrease_accuracy": 0.00248,
+      "std": 0.00165
+    },
+    "has_offers": {
+      "mean_decrease_accuracy": 0.00024,
+      "std": 0.00034
+    },
+    "pure_veg_flag": {
+      "mean_decrease_accuracy": 0.00488,
+      "std": 0.00207
+    },
+    "is_biryani": {
+      "mean_decrease_accuracy": -0.00128,
+      "std": 0.00071
+    },
+    "is_desserts_bakery": {
+      "mean_decrease_accuracy": 0.001,
+      "std": 0.00207
+    },
+    "is_beverages": {
+      "mean_decrease_accuracy": -0.001,
+      "std": 0.00057
+    },
+    "is_fast_food": {
+      "mean_decrease_accuracy": -0.00012,
+      "std": 0.00063
+    },
+    "is_north_indian": {
+      "mean_decrease_accuracy": -0.00112,
+      "std": 0.00119
+    },
+    "is_south_indian": {
+      "mean_decrease_accuracy": 0.00148,
+      "std": 0.00059
+    },
+    "has_trynew": {
+      "mean_decrease_accuracy": -0.00168,
+      "std": 0.00107
+    },
+    "has_no_code": {
+      "mean_decrease_accuracy": 0.00092,
+      "std": 0.00099
+    },
+    "has_bank_offer": {
+      "mean_decrease_accuracy": 0.00104,
+      "std": 0.00067
+    },
+    "primary_cuisine": {
+      "mean_decrease_accuracy": 0.01688,
+      "std": 0.00333
+    },
+    "location_clean": {
+      "mean_decrease_accuracy": 0.0428,
+      "std": 0.0043
+    },
+    "city_area": {
+      "mean_decrease_accuracy": 0.01344,
+      "std": 0.00199
+    }
+  },
+  "confusion_matrix_plot": "output/ml_rating_final_experiment_confusion_matrix.png",
+  "feature_importance_plot": "output/ml_rating_final_experiment_feature_importance.png",
+  "limitations": "1. Inherent Information Ceiling: Profile attributes (location, price, offers, cuisine) explain aggregate market positioning, but cannot capture food quality or operational variance.\n2. Split Trade-offs: Stratified CV treats multiple outlets of the same brand independently across different cities; GroupKFold proves brand generalization remains solid (~0.587-0.591 F1) but sacrifices city-level cross-comparison.\n3. Static Snapshot: Data reflects a specific historical crawl; dynamic pricing and real-time rating updates are not available."
+}

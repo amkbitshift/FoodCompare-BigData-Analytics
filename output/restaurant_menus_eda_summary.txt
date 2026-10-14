@@ -1,0 +1,36 @@
+RESTAURANT MENU DATASET: EXPLORATORY DATA ANALYSIS
+=======================================================
+
+Total menu records: 5,082,180
+Distinct restaurant IDs: 63,309
+Records with missing item names: 0
+Records with missing descriptions: 1,439,670
+
+PRICE ANALYSIS
+Positive parsed prices: 4,907,926
+Zero prices: 174,251
+Negative prices: 0
+Unparsed prices: 3
+Average positive listed price: 10.730
+Minimum positive listed price: 0.010
+Maximum positive listed price: 1395.000
+
+Important: Price values may use different currencies or formats. Do not interpret their overall average as a fair cross-country comparison.
+Zero-priced menu items are retained in the dataset and may represent free items, add-ons, or data-specific conventions.
+
+TOP 15 MENU CATEGORIES BY RECORD COUNT
+Picked for you: 231,642
+Beverages: 159,644
+Sides: 150,153
+Sandwiches: 147,323
+Drinks: 139,214
+Appetizers: 100,406
+Salads: 80,017
+Desserts: 52,875
+Breakfast: 50,654
+Snacks: 42,994
+Grocery: 42,788
+Wraps: 40,893
+Mains: 35,180
+No Bready Bowls™: 34,010
+Personal Care: 32,681

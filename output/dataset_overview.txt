@@ -1,0 +1,126 @@
+
+================================================================================
+FILE: cleaned_data.csv
+================================================================================
+
+COLUMNS (11):
+id, name, city, rating, rating_count, cost, cuisine, lic_no, link, address, menu
+
+FIRST 3 DATA ROWS:
+['531342', 'Janta Sweet House', 'Abohar', '4.4', '50', '200', 'Sweets,Bakery', '12117201000112', 'https://www.swiggy.com/restaurants/janta-sweet-house-central-abohar-abohar-531342', 'Janta Sweet House, Bazar No.9, Circullar Road, Abohar', 'Menu/531342.json']
+['158203', 'theka coffee desi', 'Abohar', '3.8', '100', '100', 'Beverages', '22121652000190', 'https://www.swiggy.com/restaurants/theka-coffee-desi-central-raipura-abohar-158203', 'theka coffee desi, sahtiya sadan road city', 'Menu/158203.json']
+['187912', 'Singh Hut', 'Abohar', '3.7', '20', '250', 'Fast Food,Indian', '22119652000167', 'https://www.swiggy.com/restaurants/singh-hut-nehru-park-main-bazar-abohar-187912', 'Singh Hut, CIRCULAR ROAD NEAR NEHRU PARK ABOHAR', 'Menu/187912.json']
+
+Status: sample read completed
+
+================================================================================
+FILE: Doordash.csv
+================================================================================
+
+COLUMNS (38):
+DELIVERY_NAME, DELIVERY_RATING, MARKET_NUMBER, MARKET_NAME, TIMEZONE, DASHER, IS_FIRST_DELIVERY, VEHICLE, CREATED_AT, QUOTED_DELIVERY_TIME, ESTIMATED_DELIVERY_TIME, ASAP, FRAUDULENT, ACTUAL_PICKUP_TIME, ACTUAL_DELIVERY_TIME, DASHER_ASSIGNED_TIME, MANUALLY_ASSIGNED, DASHER_CONFIRMED_TIME, DASHER_AT_STORE_TIME, CANCELLED_AT, ACTIVE_DATE, COMPOSITE_SCORE, SUBTOTAL, CONFIRM_TO_DELIVER_DURATION, DASHER_TO_RESTAURANT_DURATION, DASHER_WAIT_DURATION, RESTAURANT_TO_CUSTOMER_DURATION, WAS_BATCHED, TOTAL_ITEM_COUNT, DASHER_TO_STORE_TIME_CATEGORY, ACTUAL_PICKUP_TIME_GALAXY_A, ACTUAL_DELIVERY_TIME_GALAXY_A, DASHER_ASSIGNED_TIME_GALAXY_A, DASHER_AT_STORE_TIME_GALAXY_A, COMPOSITE_STAR_RATING, NUM_FIVE_STARS, NUM_DELIVERIES, NUM_ON_TIME_DELIVERIES
+
+FIRST 3 DATA ROWS:
+['930', '5', '4050', 'Doorlanta', 'Galaxy A', 'Katelynn', '0', 'car', '2055-06-08T14:40:31.776158Z', '2055-06-08T16:30:00Z', '2055-06-08T16:30:00Z', '0', '0', '2055-06-08T16:27:25.447059Z', '2055-06-08T16:43:26.092195Z', '2055-06-08T15:24:32.128072Z', '1', '2055-06-08T15:24:56.562443Z', '', '', '6/8/2055', '4.5', '3000', '4710', '', '', '961', '0', '47', '', '2055-06-08T12:27:25.447059Z', '2055-06-08T12:43:26.092195Z', '2055-06-08T11:24:32.128072Z', '', '4.7', '1261', '3264', '232']
+['371', '', '4001', 'Dashattan', 'Galaxy A', 'Arya', '0', 'bicycle', '2055-06-03T23:55:23.345361Z', '2055-06-04T02:10:19.438Z', '2055-06-04T01:42:06.438Z', '1', '0', '2055-06-04T00:43:45.908174Z', '2055-06-04T01:08:26.640633Z', '2055-06-04T00:30:14.629493Z', '1', '2055-06-04T00:30:30.006106Z', '2055-06-04T00:38:02.90308Z', '', '6/3/2055', '3.198404529', '2000', '2276', '452', '343', '1481', '0', '10', 'early', '2055-06-03T20:43:45.908174Z', '2055-06-03T21:08:26.640633Z', '2055-06-03T20:30:14.629493Z', '2055-06-03T20:38:02.90308Z', '4.17', '457', '1599', '']
+['1012', '5', '4001', 'Dashattan', 'Galaxy A', 'Bret', '0', 'car', '2055-06-09T13:45:44.022432Z', '2055-06-09T15:29:57.082Z', '2055-06-09T15:01:44.082Z', '1', '1', '2055-06-09T15:11:25.372168Z', '2055-06-09T15:13:35.539122Z', '2055-06-09T14:04:34.144994Z', '0', '2055-06-09T14:05:28.008027Z', '2055-06-09T14:19:12.351423Z', '', '6/9/2055', '4.5', '1500', '4087', '824', '3133', '130', '0', '22', 'late', '2055-06-09T11:11:25.372168Z', '2055-06-09T11:13:35.539122Z', '2055-06-09T10:04:34.144994Z', '2055-06-09T10:19:12.351423Z', '3.82', '174', '773', '']
+
+Status: sample read completed
+
+================================================================================
+FILE: enhanced_zomato_dataset_clean.csv
+================================================================================
+
+COLUMNS (26):
+Restaurant_Name, Dining_Rating, Delivery_Rating, Dining_Votes, Delivery_Votes, Cuisine, Place_Name, City, Item_Name, Best_Seller, Votes, Prices, Average_Rating, Total_Votes, Price_per_Vote, Log_Price, Is_Bestseller, Restaurant_Popularity, Avg_Rating_Restaurant, Avg_Price_Restaurant, Avg_Rating_Cuisine, Avg_Price_Cuisine, Avg_Rating_City, Avg_Price_City, Is_Highly_Rated, Is_Expensive
+
+FIRST 3 DATA ROWS:
+['Doner King', '3.9', '4.2', '39', '0', 'Fast Food', 'Malakpet', ' Hyderabad', 'Platter Kebab Combo', 'BESTSELLER', '84', '249.0', '4.05', '39', '2.929411764705882', '5.521460917862246', '1', '46', '4.05', '171.34782608695653', '3.8186797045130767', '255.9548939215356', '3.9390311407230185', '245.13048229039904', '1', '0']
+['Doner King', '3.9', '4.2', '39', '0', 'Fast Food', 'Malakpet', ' Hyderabad', 'Chicken Rumali Shawarma', 'BESTSELLER', '45', '129.0', '4.05', '39', '2.8043478260869565', '4.867534450455582', '1', '46', '4.05', '171.34782608695653', '3.8186797045130767', '255.9548939215356', '3.9390311407230185', '245.13048229039904', '1', '0']
+['Doner King', '3.9', '4.2', '39', '0', 'Fast Food', 'Malakpet', ' Hyderabad', 'Chicken Tandoori Salad', 'NONE', '39', '189.0', '4.05', '39', '4.725', '5.247024072160486', '1', '46', '4.05', '171.34782608695653', '3.8186797045130767', '255.9548939215356', '3.9390311407230185', '245.13048229039904', '1', '0']
+
+Status: sample read completed
+
+================================================================================
+FILE: Foodpanda Analysis Dataset.csv
+================================================================================
+
+COLUMNS (20):
+customer_id, gender, age, city, signup_date, order_id, order_date, restaurant_name, dish_name, category, quantity, price, payment_method, order_frequency, last_order_date, loyalty_points, churned, rating, rating_date, delivery_status
+
+FIRST 3 DATA ROWS:
+['C5663', 'Male', 'Adult', 'Peshawar', '1/14/2024', 'O9663', '8/23/2023', "McDonald's", 'Burger', 'Italian', '5', '1478.27', 'Cash', '38', '7/19/2025', '238', 'Active', '3', '10/14/2024', 'Cancelled']
+['C2831', 'Male', 'Adult', 'Multan', '7/7/2024', 'O6831', '8/23/2023', 'KFC', 'Burger', 'Italian', '3', '956.04', 'Wallet', '24', '11/25/2024', '81', 'Active', '2', '8/21/2025', 'Delayed']
+['C2851', 'Other', 'Senior', 'Multan', '6/20/2025', 'O6851', '8/23/2023', 'Pizza Hut', 'Fries', 'Italian', '2', '882.51', 'Cash', '42', '5/10/2025', '82', 'Inactive', '3', '9/19/2024', 'Delayed']
+
+Status: sample read completed
+
+================================================================================
+FILE: grubhub.csv
+================================================================================
+
+COLUMNS (27):
+searched_zipcode, searched_lat, searched_lng, searched_address, searched_state, searched_city, searched_metro, is_gh, latitude, longitude, distance, loc_name, loc_number, url, address, cuisines, delivery_fee_raw, delivery_fee, delivery_time_raw, delivery_time, service_fee, phone, review_count, review_rating, RunDate, restaurant_tags, delivery_type
+
+FIRST 3 DATA ROWS:
+['11216', '40.6788319', '-73.9506774', '300 Madison St, Brooklyn, NY 11216, USA', 'NY', 'Brooklyn', 'NY', '$0 with GH+', '40.67882919', '-73.94986725', '0.04', 'Chun Vegetarian', '1013747', 'https://www.grubhub.com/chun-vegetarian-582-nostrand-ave-brooklyn/1013747', '582 Nostrand Ave', '["Asian", "Vegan", "Vegetarian"]', '$0 delivery', '0.00', '35-45', '40.0', '0.00', '3476278080', '1691', '4.57', '2022-04-25 07:01:11', '["PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]', 'SELF']
+['11216', '40.6788319', '-73.9506774', '300 Madison St, Brooklyn, NY 11216, USA', 'NY', 'Brooklyn', 'NY', '$0 with GH+', '40.67871475', '-73.94987488', '0.04', 'India House', '1436488', 'https://www.grubhub.com/india-house-586-nostand-ave-brooklyn/1436488', '586 Nostand Ave', '["Healthy", "Indian", "Lunch Specials", "Vegetarian"]', '$0 delivery', '0.00', '35-55', '45.0', '0.00', '7188577011', '697', '4.77', '2022-04-25 07:01:11', '["PRICING_ELIGIBLE_FOR_STANDARD_ORDER", "SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]', 'SELF']
+['11216', '40.6788319', '-73.9506774', '300 Madison St, Brooklyn, NY 11216, USA', 'NY', 'Brooklyn', 'NY', '$0 with GH+', '40.67887878', '-73.94944764', '0.06', 'Pattie Hut', '2970887', 'https://www.grubhub.com/pattie-hut-543-nostrand-ave-brooklyn/2970887', '543 Nostrand Ave.', '["Chicken", "Soup", "Wings"]', '$1.99 delivery', '1.99', '20-35', '27.5', '10.00', '7186223222', '11', '3.67', '2022-04-25 07:01:11', '["SUBSCRIPTION_ELIGIBLE_FOR_STANDARD_ORDER"]', 'GRUBHUB']
+
+Status: sample read completed
+
+================================================================================
+FILE: restaurant-menus.csv
+================================================================================
+
+COLUMNS (5):
+restaurant_id, category, name, description, price
+
+FIRST 3 DATA ROWS:
+['1', 'Extra Large Pizza', 'Extra Large Meat Lovers', 'Whole pie.', '15.99 USD']
+['1', 'Extra Large Pizza', 'Extra Large Supreme', 'Whole pie.', '15.99 USD']
+['1', 'Extra Large Pizza', 'Extra Large Pepperoni', 'Whole pie.', '14.99 USD']
+
+Status: sample read completed
+
+================================================================================
+FILE: restaurants.csv
+================================================================================
+
+COLUMNS (11):
+id, position, name, score, ratings, category, price_range, full_address, zip_code, lat, lng
+
+FIRST 3 DATA ROWS:
+['1', '19', 'PJ Fresh (224 Daniel Payne Drive)', '', '', 'Burgers, American, Sandwiches', '$', '224 Daniel Payne Drive, Birmingham, AL, 35207', '35207', '33.5623653', '-86.8307025']
+['2', '9', "J' ti`'z Smoothie-N-Coffee Bar", '', '', 'Coffee and Tea, Breakfast and Brunch, Bubble Tea', '', '1521 Pinson Valley Parkway, Birmingham, AL, 35217', '35217', '33.58364', '-86.77333']
+['3', '6', 'Philly Fresh Cheesesteaks (541-B Graymont Ave)', '', '', 'American, Cheesesteak, Sandwiches, Alcohol', '$', '541-B Graymont Ave, Birmingham, AL, 35204', '35204', '33.5098', '-86.85464']
+
+Status: sample read completed
+
+================================================================================
+FILE: Swiggy.csv
+================================================================================
+
+COLUMNS (17):
+city, city link, subcity, subcity link, restaurant code, restaurant, rating, rating count, cost, address, cuisine, licension no, restaurant link, menu, item, price, veg_or_non_veg
+
+FIRST 3 DATA ROWS:
+['Abohar', 'https://www.swiggy.com/city/abohar', '', '', '567335', 'AB FOODS POINT', '--', 'Too Few Ratings', '₹ 200', 'AB FOODS POINT, NEAR RISHI NARANG DENTAL CLINIC , NEAR IDBI BANK, ABOHAR', 'Beverages,Pizzas', '22122652000138', 'https://www.swiggy.com/restaurants/ab-foods-point-central-abohar-abohar-567335', 'Burger', 'Aloo Tikki Burger', '40', 'Veg']
+['Abohar', 'https://www.swiggy.com/city/abohar', '', '', '567335', 'AB FOODS POINT', '--', 'Too Few Ratings', '₹ 200', 'AB FOODS POINT, NEAR RISHI NARANG DENTAL CLINIC , NEAR IDBI BANK, ABOHAR', 'Beverages,Pizzas', '22122652000138', 'https://www.swiggy.com/restaurants/ab-foods-point-central-abohar-abohar-567335', 'Burger', 'Veg Creamy Burger', '50', 'Veg']
+['Abohar', 'https://www.swiggy.com/city/abohar', '', '', '567335', 'AB FOODS POINT', '--', 'Too Few Ratings', '₹ 200', 'AB FOODS POINT, NEAR RISHI NARANG DENTAL CLINIC , NEAR IDBI BANK, ABOHAR', 'Beverages,Pizzas', '22122652000138', 'https://www.swiggy.com/restaurants/ab-foods-point-central-abohar-abohar-567335', 'Burger', 'Cheese Burst Burger', '65', 'Veg']
+
+Status: sample read completed
+
+================================================================================
+FILE: swiggy_file.csv
+================================================================================
+
+COLUMNS (10):
+Restaurant Name, Cuisine, Rating, Number of Ratings, Average Price, Number of Offers, Offer Name, Area, Pure Veg, Location
+
+FIRST 3 DATA ROWS:
+["La Pino'Z Pizza", 'Pizzas, Pastas', '4.0', '10+ ratings', '₹250 for two', '2', 'FLAT DEAL\nFLAT ₹125 OFF\nUSE FLAT125ABOVE ₹699, FLAT ₹120 OFF\nUSE AXIS120ABOVE ₹500', 'LALA LAJPAT RAI MARKET', 'No', 'Abohar']
+['The Second Wife', 'Indian, North Indian', '3.6', '50+ ratings', '₹250 for two', '2', '30% OFF UPTO ₹75\nUSE TRYNEWABOVE ₹149, FLAT ₹120 OFF\nUSE AXIS120ABOVE ₹500', 'Central Abohar', 'No', 'Abohar']
+['Tasty Bites', 'Italian, Beverages', '3.8', '10+ ratings', '₹200 for two', '1', 'FLAT ₹120 OFF\nUSE AXIS120ABOVE ₹500', 'Central Abohar', 'Yes', 'Abohar']
+
+Status: sample read completed
